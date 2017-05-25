@@ -1,6 +1,61 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "qUd2AA/+1E7WacQ/2pNaSiU8azM=",
+			"path": "github.com/labstack/echo",
+			"revision": "a8b6864be328fcb5c2d96d32c75b750f84e0e4be",
+			"revisionTime": "2017-02-02T19:50:17Z"
+		},
+		{
+			"checksumSHA1": "R6DzcBLEP0BONPpsyr+11N7xh5w=",
+			"path": "github.com/labstack/gommon/color",
+			"revision": "f72d3c883f8ea180da8f085dd320804c41332ad1",
+			"revisionTime": "2017-01-12T04:03:50Z"
+		},
+		{
+			"checksumSHA1": "uHA6zbtxzJce4r+6uk8zu11qkuk=",
+			"path": "github.com/labstack/gommon/log",
+			"revision": "f72d3c883f8ea180da8f085dd320804c41332ad1",
+			"revisionTime": "2017-01-12T04:03:50Z"
+		},
+		{
+			"checksumSHA1": "I4njd26dG5hxFT2nawuByM4pxzY=",
+			"path": "github.com/mattn/go-colorable",
+			"revision": "5411d3eea5978e6cdc258b30de592b60df6aba96",
+			"revisionTime": "2017-02-10T17:28:01Z"
+		},
+		{
+			"checksumSHA1": "EkT5JmFvz3zOPWappEFyYWUaeY0=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "281032e84ae07510239465db46bf442aa44b953a",
+			"revisionTime": "2017-02-09T17:56:15Z"
+		},
+		{
+			"checksumSHA1": "IwnRIkCGUzX930DZG0riYLXg4gk=",
+			"path": "github.com/robfig/cron",
+			"revision": "2ae65ff969f1d4ba15ca57b2f3d263244465b78e",
+			"revisionTime": "2017-05-22T21:09:51Z"
+		},
+		{
+			"checksumSHA1": "j7lWhgAteszPecjIkS12+tjXE2E=",
+			"path": "github.com/valyala/fasttemplate",
+			"revision": "d090d65668a286d9a180d43a19dfdc5dcad8fe88",
+			"revisionTime": "2017-01-12T11:45:30Z"
+		},
+		{
+			"checksumSHA1": "QNHLX/9+KNzu0oCCdqUSEX4kyiY=",
+			"path": "golang.org/x/crypto/acme",
+			"revision": "cbc3d0884eac986df6e78a039b8792e869bff863",
+			"revisionTime": "2017-04-09T18:29:52Z"
+		},
+		{
+			"checksumSHA1": "6B3fCx0DZ95C5KGJClNzPWs5hto=",
+			"path": "golang.org/x/crypto/acme/autocert",
+			"revision": "cbc3d0884eac986df6e78a039b8792e869bff863",
+			"revisionTime": "2017-04-09T18:29:52Z"
+		}
+	],
 	"rootPath": "github.com/srs/node-repo-proxy"
 }
