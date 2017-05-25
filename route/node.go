@@ -21,7 +21,7 @@ func nodeMetaDataSha1(c echo.Context) error {
 	return serveSha1(c, node.MetaData)
 }
 
-func nodeFile(c echo.Context) error {
+func buildNodeUrl(c echo.Context) string {
 	file := c.Param("file")
 	version := c.Param("version")
 
@@ -36,11 +36,10 @@ func nodeFile(c echo.Context) error {
 		url += "node-v" + version + "-" + arch + "." + ext
 	}
 
-	resp, err := http.Get(url)
-	if err != nil {
-		return err
-	}
+	return url
+}
 
+func serveResp(c echo.Context, resp *http.Response) error {
 	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
@@ -55,4 +54,26 @@ func nodeFile(c echo.Context) error {
 	io.Copy(c.Response().Writer, resp.Body)
 
 	return nil
+}
+
+func nodeFile(c echo.Context) error {
+	url := buildNodeUrl(c)
+
+	resp, err := http.Get(url)
+	if err != nil {
+		return err
+	}
+
+	return serveResp(c, resp)
+}
+
+func nodeFileHead(c echo.Context) error {
+	url := buildNodeUrl(c)
+
+	resp, err := http.Head(url)
+	if err != nil {
+		return err
+	}
+
+	return serveResp(c, resp)
 }
