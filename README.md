@@ -17,6 +17,10 @@ To download version 7.6.0 (linux x86, tar.gz) the GAV-coordinate would be:
 
 * `org.node:node:7.6.0:linux-x86@tar.gz`
 
+And the generated URL would then be:
+
+* https://node-repo-proxy.herokuapp.com/org/node/node/7.6.0/node-7.6.0-linux-x86.tar.gz
+
 ## What's missing
 
 * Testing.
