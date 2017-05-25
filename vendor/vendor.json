@@ -39,6 +39,12 @@
 			"revisionTime": "2017-05-22T21:09:51Z"
 		},
 		{
+			"checksumSHA1": "LTOa3BADhwvT0wFCknPueQALm8I=",
+			"path": "github.com/valyala/bytebufferpool",
+			"revision": "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7",
+			"revisionTime": "2016-08-17T18:16:52Z"
+		},
+		{
 			"checksumSHA1": "j7lWhgAteszPecjIkS12+tjXE2E=",
 			"path": "github.com/valyala/fasttemplate",
 			"revision": "d090d65668a286d9a180d43a19dfdc5dcad8fe88",
