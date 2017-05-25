@@ -1,0 +1,4 @@
+.DS_Store
+.idea
+build/
+vendor/github.com/

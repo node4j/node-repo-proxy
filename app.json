@@ -1,0 +1,13 @@
+{
+  "name": "NodeRepoProxy",
+  "description": "A node maven repositoy proxy.",
+  "keywords": [
+    "node",
+    "go",
+    "maven"
+  ],
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/srs/node-repo-proxy",
+  "website": "http://github.com/srs/node-repo-proxy",
+  "repository": "http://github.com/srs/node-repo-proxy"
+}
