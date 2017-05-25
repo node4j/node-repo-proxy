@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/labstack/echo"
 	"github.com/robfig/cron"
 	"github.com/srs/node-repo-proxy/node"
@@ -9,6 +11,11 @@ import (
 )
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
+
 	e := echo.New()
 	util.SetLogger(e.Logger)
 
@@ -22,5 +29,5 @@ func main() {
 	c.Start()
 
 	route.Init(e)
-	util.Log.Fatal(e.Start(":1323"))
+	util.Log.Fatal(e.Start(":" + port))
 }
