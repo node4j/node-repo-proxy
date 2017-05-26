@@ -10,8 +10,7 @@ It's deployed for now on Heroku free instance and can me accessed here:
 
 ## Node download
 
-It will automatically serve metadata (latest node versions). See the
-following URL (updated at midnight CET each day):
+It will automatically serve metadata (latest node versions).
 
 * https://node-repo-proxy.herokuapp.com/org/node/node/maven-metadata.xml
 
