@@ -1,7 +1,6 @@
 package route
 
 import (
-	"io"
 	"net/http"
 	"strings"
 
@@ -10,7 +9,8 @@ import (
 )
 
 func nodeMetaData(c echo.Context) error {
-	return c.XMLBlob(http.StatusOK, node.GetMetaData())
+	data, err := node.GetMetaData()
+	return serveMetaData(c, data, err)
 }
 
 func buildNodeUrl(c echo.Context) string {
@@ -29,23 +29,6 @@ func buildNodeUrl(c echo.Context) string {
 	}
 
 	return url
-}
-
-func serveResp(c echo.Context, resp *http.Response) error {
-	defer resp.Body.Close()
-
-	if resp.StatusCode != 200 {
-		return c.String(resp.StatusCode, resp.Status)
-	}
-
-	for k, v := range resp.Header {
-		c.Response().Header().Set(k, v[0])
-	}
-
-	c.Response().WriteHeader(resp.StatusCode)
-	io.Copy(c.Response().Writer, resp.Body)
-
-	return nil
 }
 
 func nodeFile(c echo.Context) error {

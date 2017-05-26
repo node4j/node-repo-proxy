@@ -18,6 +18,10 @@ func fetchNodeIndex() (Index, error) {
 		return nil, err
 	}
 
+	if resp.StatusCode != 200 {
+		return nil, nil
+	}
+
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {

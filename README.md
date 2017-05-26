@@ -39,4 +39,3 @@ The meta-data for NPM packages are also available:
 
 * Testing.
 * SHA and MD5 from distributions.
-* Caching of meta-data.

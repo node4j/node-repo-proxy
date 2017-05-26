@@ -33,10 +33,10 @@
 			"revisionTime": "2017-02-09T17:56:15Z"
 		},
 		{
-			"checksumSHA1": "IwnRIkCGUzX930DZG0riYLXg4gk=",
-			"path": "github.com/robfig/cron",
-			"revision": "2ae65ff969f1d4ba15ca57b2f3d263244465b78e",
-			"revisionTime": "2017-05-22T21:09:51Z"
+			"checksumSHA1": "SQi5yeNb9HnAMRpEhQgcv9x9yKc=",
+			"path": "github.com/patrickmn/go-cache",
+			"revision": "7ac151875ffb48b9f3ccce9ea20f020b0c1596c8",
+			"revisionTime": "2017-04-18T23:29:47Z"
 		},
 		{
 			"checksumSHA1": "LTOa3BADhwvT0wFCknPueQALm8I=",

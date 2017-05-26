@@ -2,31 +2,31 @@ package node
 
 import "github.com/srs/node-repo-proxy/util"
 
-var metaData []byte
+func GetMetaData() ([]byte, error) {
+	data, found := util.GetFromCache("node")
+	if found {
+		return data.([]byte), nil
+	}
 
-func GetMetaData() []byte {
-	return metaData
+	data, err := loadMetaData()
+	if err != nil {
+		return nil, err
+	}
+
+	util.PutInCache("node", data)
+	return data.([]byte), nil
 }
 
-func LoadMetaData() error {
-	util.Log.Info("Loading node metadata")
-
+func loadMetaData() ([]byte, error) {
 	index, err := fetchNodeIndex()
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	data, err := indexToMaven(index)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	metaData = data
-	util.Log.Info("Updated node metadata")
-
-	return nil
-}
-
-func UpdateMetaData() {
-	LoadMetaData()
+	return data, nil
 }

@@ -2,3 +2,4 @@
 .idea
 build/
 vendor/github.com/
+vendor/golang.org/

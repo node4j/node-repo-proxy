@@ -47,13 +47,5 @@ func npmMetaData(c echo.Context) error {
 	name := c.Param("name")
 	data, err := npm.GetMetaData(name)
 
-	if err != nil {
-		return err
-	}
-
-	if data == nil {
-		return c.String(http.StatusNotFound, "Not found")
-	}
-
-	return c.XMLBlob(http.StatusOK, data)
+	return serveMetaData(c, data, err)
 }
