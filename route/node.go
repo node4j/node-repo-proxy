@@ -13,14 +13,6 @@ func nodeMetaData(c echo.Context) error {
 	return c.XMLBlob(http.StatusOK, node.GetMetaData())
 }
 
-func nodeMetaDataMd5(c echo.Context) error {
-	return serveMd5(c, node.GetMetaData())
-}
-
-func nodeMetaDataSha1(c echo.Context) error {
-	return serveSha1(c, node.GetMetaData())
-}
-
 func buildNodeUrl(c echo.Context) string {
 	file := c.Param("file")
 	version := c.Param("version")
