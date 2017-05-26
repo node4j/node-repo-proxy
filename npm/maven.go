@@ -2,6 +2,7 @@ package npm
 
 import (
 	"encoding/xml"
+	"sort"
 	"time"
 
 	"github.com/srs/node-repo-proxy/maven"
@@ -15,6 +16,8 @@ func indexToMaven(index Index) ([]byte, error) {
 		versions[i] = v.Version
 		i++
 	}
+
+	sort.Sort(sort.Reverse(sort.StringSlice(versions)))
 
 	m := maven.MetaData{}
 	m.GroupId = "org.npmjs"

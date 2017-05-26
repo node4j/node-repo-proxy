@@ -2,6 +2,7 @@ package node
 
 import (
 	"encoding/xml"
+	"sort"
 	"time"
 
 	"github.com/srs/node-repo-proxy/maven"
@@ -12,6 +13,8 @@ func indexToMaven(index Index) ([]byte, error) {
 	for i := range index {
 		versions[i] = index[i].Version[1:]
 	}
+
+	sort.Sort(sort.Reverse(sort.StringSlice(versions)))
 
 	m := maven.MetaData{}
 	m.GroupId = "org.node"
