@@ -2,7 +2,11 @@ package node
 
 import "github.com/srs/node-repo-proxy/util"
 
-var MetaData []byte
+var metaData []byte
+
+func GetMetaData() []byte {
+	return metaData
+}
 
 func LoadMetaData() error {
 	util.Log.Info("Loading node metadata")
@@ -17,7 +21,7 @@ func LoadMetaData() error {
 		return err
 	}
 
-	MetaData = data
+	metaData = data
 	util.Log.Info("Updated node metadata")
 
 	return nil
