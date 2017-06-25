@@ -1,7 +1,6 @@
 package route
 
 import (
-	"net/http"
 	"strings"
 
 	"github.com/labstack/echo"
@@ -31,6 +30,7 @@ func buildNodeUrl(c echo.Context) string {
 	return url
 }
 
+/*
 func nodeFile(c echo.Context) error {
 	url := buildNodeUrl(c)
 
@@ -41,7 +41,14 @@ func nodeFile(c echo.Context) error {
 
 	return serveResp(c, resp)
 }
+*/
 
+func nodeFileRedirect(c echo.Context) error {
+	url := buildNodeUrl(c)
+	return serveRedirect(c, url)
+}
+
+/*
 func nodeFileHead(c echo.Context) error {
 	url := buildNodeUrl(c)
 
@@ -52,3 +59,4 @@ func nodeFileHead(c echo.Context) error {
 
 	return serveResp(c, resp)
 }
+*/

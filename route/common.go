@@ -1,12 +1,12 @@
 package route
 
 import (
-	"io"
 	"net/http"
 
 	"github.com/labstack/echo"
 )
 
+/*
 func serveResp(c echo.Context, resp *http.Response) error {
 	defer resp.Body.Close()
 
@@ -22,6 +22,11 @@ func serveResp(c echo.Context, resp *http.Response) error {
 	io.Copy(c.Response().Writer, resp.Body)
 
 	return nil
+}
+*/
+
+func serveRedirect(c echo.Context, url string) error {
+	return c.Redirect(303, url)
 }
 
 func serveMetaData(c echo.Context, data []byte, err error) error {

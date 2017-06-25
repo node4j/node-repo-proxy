@@ -1,7 +1,6 @@
 package route
 
 import (
-	"net/http"
 	"strings"
 
 	"github.com/labstack/echo"
@@ -21,6 +20,7 @@ func buildNpmUrl(c echo.Context) string {
 	return url
 }
 
+/*
 func npmFile(c echo.Context) error {
 	url := buildNpmUrl(c)
 
@@ -31,7 +31,14 @@ func npmFile(c echo.Context) error {
 
 	return serveResp(c, resp)
 }
+*/
 
+func npmFileRedirect(c echo.Context) error {
+	url := buildNpmUrl(c)
+	return serveRedirect(c, url)
+}
+
+/*
 func npmFileHead(c echo.Context) error {
 	url := buildNpmUrl(c)
 
@@ -42,6 +49,7 @@ func npmFileHead(c echo.Context) error {
 
 	return serveResp(c, resp)
 }
+*/
 
 func npmMetaData(c echo.Context) error {
 	name := c.Param("name")
