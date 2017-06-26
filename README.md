@@ -4,7 +4,7 @@ This project implements a maven repository that proxies node distribution
 downloads. The aim is that it can be used by various Java build plugins
 that downloads Node and uses Node in build processes.
 
-It's deployed for now on Heroku instance and can me accessed here:
+It's deployed for now on a Heroku instance and can be accessed here:
 
 * https://repo.node4j.org/
 
