@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/labstack/echo"
-	"github.com/srs/node-repo-proxy/route"
-	"github.com/srs/node-repo-proxy/util"
+	"github.com/node4j/node-repo-proxy/route"
+	"github.com/node4j/node-repo-proxy/util"
 )
 
 func main() {

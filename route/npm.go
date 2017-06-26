@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/labstack/echo"
-	"github.com/srs/node-repo-proxy/npm"
+	"github.com/node4j/node-repo-proxy/npm"
 )
 
 func buildNpmUrl(c echo.Context) string {

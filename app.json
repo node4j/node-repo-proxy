@@ -7,7 +7,7 @@
     "maven"
   ],
   "image": "heroku/go:1.6",
-  "mount_dir": "src/github.com/srs/node-repo-proxy",
-  "website": "http://github.com/srs/node-repo-proxy",
-  "repository": "http://github.com/srs/node-repo-proxy"
+  "mount_dir": "src/github.com/node4j/node-repo-proxy",
+  "website": "http://github.com/node4j/node-repo-proxy",
+  "repository": "http://github.com/node4j/node-repo-proxy"
 }

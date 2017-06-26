@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/labstack/echo"
-	"github.com/srs/node-repo-proxy/node"
+	"github.com/node4j/node-repo-proxy/node"
 )
 
 func nodeMetaData(c echo.Context) error {

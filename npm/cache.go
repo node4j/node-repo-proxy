@@ -1,6 +1,6 @@
 package npm
 
-import "github.com/srs/node-repo-proxy/util"
+import "github.com/node4j/node-repo-proxy/util"
 
 func GetMetaData(name string) ([]byte, error) {
 	key := "npm." + name

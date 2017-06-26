@@ -1,6 +1,6 @@
 package node
 
-import "github.com/srs/node-repo-proxy/util"
+import "github.com/node4j/node-repo-proxy/util"
 
 func GetMetaData() ([]byte, error) {
 	data, found := util.GetFromCache("node")

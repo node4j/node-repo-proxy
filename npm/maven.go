@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/srs/node-repo-proxy/maven"
+	"github.com/node4j/node-repo-proxy/maven"
 )
 
 func indexToMaven(index Index) ([]byte, error) {
