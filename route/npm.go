@@ -15,6 +15,10 @@ func buildNpmUrl(c echo.Context) string {
 	rest := c.Param("file")[len:]
 
 	ext := strings.Join(strings.Split(rest, ".")[1:], ".")
+	if ext == "tar.gz" {
+		ext = "tgz"
+	}
+
 	url := "https://registry.npmjs.org/" + name + "/-/" + name + "-" + version + "." + ext
 
 	return url
